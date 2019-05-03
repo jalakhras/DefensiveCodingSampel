@@ -28,10 +28,9 @@ namespace DefensiveCodingSampel
             var payment = new Payment();
             //Populate the payment instance
 
-            var allowSplitOrder = true;
-            var emailReceipt = true;
+           
             var orderController = new OrderController();
-            orderController.PlaceOrder(customer, order, payment, allowSplitOrder, emailReceipt);
+            orderController.PlaceOrder(customer, order, payment, allowSplitOrder:false, emailReceipt:true);
         }
     }
 }
