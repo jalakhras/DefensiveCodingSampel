@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.Win", "DefensiveCodingSampel\DCS.Win.csproj", "{75B6FD46-95D9-446B-8242-CCEA2C8218D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DCS.BL", "DCS.BL\DCS.BL.csproj", "{65377E38-ED11-40B4-B77C-1E27AF12C554}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{C0071BDA-E81C-4DD0-AF82-82D603D43C27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75B6FD46-95D9-446B-8242-CCEA2C8218D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B6FD46-95D9-446B-8242-CCEA2C8218D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B6FD46-95D9-446B-8242-CCEA2C8218D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B6FD46-95D9-446B-8242-CCEA2C8218D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65377E38-ED11-40B4-B77C-1E27AF12C554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65377E38-ED11-40B4-B77C-1E27AF12C554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65377E38-ED11-40B4-B77C-1E27AF12C554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65377E38-ED11-40B4-B77C-1E27AF12C554}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0071BDA-E81C-4DD0-AF82-82D603D43C27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0071BDA-E81C-4DD0-AF82-82D603D43C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0071BDA-E81C-4DD0-AF82-82D603D43C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0071BDA-E81C-4DD0-AF82-82D603D43C27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {726EEBA0-BD8C-45B2-8303-CE1193E623CD}
+	EndGlobalSection
+EndGlobal
