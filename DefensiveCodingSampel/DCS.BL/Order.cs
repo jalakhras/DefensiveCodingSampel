@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DCS.BL
 {
-    class Order
+   public class Order
     {
     }
 }

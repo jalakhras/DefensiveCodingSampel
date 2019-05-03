@@ -12,4 +12,8 @@
     <CodeAnalysisRuleSet />
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj" />
+  </ItemGroup>
+
 </Project>

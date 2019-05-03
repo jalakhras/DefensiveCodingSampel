@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DCS.BL
+﻿namespace DCS.BL
 {
-    class Inventory
+   public class Inventory
     {
     }
 }
