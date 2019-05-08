@@ -5,39 +5,45 @@ using System.Text;
 
 namespace DCS.BL
 {
-   public class OrderController
+    public class OrderController
     {
-        private readonly CustomerRepository customerRepository;
-        private readonly OrderRepository orderRepository;
-        private readonly InventoryRepository inventoryRepository;
-        private readonly EmailLibrary emailLibrary;
+        private CustomerRepository customerRepository { get; set; }
+        private OrderRepository orderRepository { get; set; }
+        private InventoryRepository inventoryRepository { get; set; }
+        private EmailLibrary emailLibrary { get; set; }
+
         public OrderController()
         {
-             customerRepository = new CustomerRepository();
-             orderRepository = new OrderRepository();
-             inventoryRepository = new InventoryRepository();
-             emailLibrary = new EmailLibrary();
+            customerRepository = new CustomerRepository();
+            orderRepository = new OrderRepository();
+            inventoryRepository = new InventoryRepository();
+            emailLibrary = new EmailLibrary();
         }
-        public  void PlaceOrder(Customer customer,
+
+        public void PlaceOrder(Customer customer,
                                 Order order,
                                 Payment payment,
-                                bool allowSplitOrder, bool emailReceipt)
+                                bool allowSplitOrders, bool emailReceipt)
         {
             customerRepository.Add(customer);
 
             orderRepository.Add(order);
 
-            inventoryRepository.OrderItems(order, allowSplitOrder);
+            inventoryRepository.OrderItems(order, allowSplitOrders);
 
             payment.ProcessPayment();
 
             if (emailReceipt)
             {
-                customer.ValidateEmail();
-                customerRepository.Update();
-                emailLibrary.SendEmail(customer.EmailAddress, "Here is your receipt");
+                var result = customer.ValidateEmail();
+                if (result.Item1)
+                {
+                    customerRepository.Update();
+
+                    emailLibrary.SendEmail(customer.EmailAddress,
+                                            "Here is your receipt");
+                }
             }
         }
-
     }
 }

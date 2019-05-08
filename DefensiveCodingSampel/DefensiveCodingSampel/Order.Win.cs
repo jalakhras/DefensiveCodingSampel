@@ -30,7 +30,7 @@ namespace DefensiveCodingSampel
 
            
             var orderController = new OrderController();
-            orderController.PlaceOrder(customer, order, payment, allowSplitOrder:false, emailReceipt:true);
+            orderController.PlaceOrder(customer, order, payment, allowSplitOrders: false, emailReceipt:true);
         }
     }
 }
