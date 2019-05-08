@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Common;
+using System;
 
 namespace DCS.BL
 {
@@ -42,39 +43,39 @@ namespace DCS.BL
             return (actualStepCount / goalStepCount) * 100;
         }
 
-        public Tuple<bool,string> ValidateEmail()
+        public OperationResult ValidateEmail()
         {
-            Tuple<bool, string> result = Tuple.Create(true, "");
+            var op = new OperationResult();
 
             if (string.IsNullOrWhiteSpace(this.EmailAddress))
             {
-
-                result = Tuple.Create(false , "Email address is null");
+               op.Success = false;
+               op.AddMessage("Email address is null");
             }
 
-            if (result.Item1)
+            if (op.Success)
             {
                 var isValidFormat = true;
                 // Code here that validates the format of the email
                 // using Regular Expressions.
                 if (!isValidFormat)
                 {
-
-                    result = Tuple.Create(false,"Email address is not in a correct format");
+                    op.Success = false;
+                    op.AddMessage("Email address is not in a correct format");
                 }
             }
 
-            if (result.Item1)
+            if (op.Success)
             {
                 var isRealDomain = true;
                 // Code here that confirms whether domain exists.
                 if (!isRealDomain)
                 {
-
-                    result = Tuple.Create(false,"Email address does not include a valid domain");
+                    op.Success = false;
+                    op.AddMessage("Email address does not include a valid domain");
                 }
             }
-            return result; 
+            return op; 
         }
     }
 }

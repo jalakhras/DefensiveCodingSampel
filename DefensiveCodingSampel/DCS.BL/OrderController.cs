@@ -36,7 +36,7 @@ namespace DCS.BL
             if (emailReceipt)
             {
                 var result = customer.ValidateEmail();
-                if (result.Item1)
+                if (result.Success)
                 {
                     customerRepository.Update();
 
