@@ -1,6 +1,6 @@
 ﻿namespace DefensiveCodingSampel
 {
-    partial class Form1
+    partial class OrderWin
     {
         /// <summary>
         /// Required designer variable.

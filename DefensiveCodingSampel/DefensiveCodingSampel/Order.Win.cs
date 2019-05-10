@@ -5,9 +5,9 @@ using Core.Common;
 
 namespace DefensiveCodingSampel
 {
-    public partial class Form1 : Form
+    public partial class OrderWin : Form
     {
-        public Form1()
+        public OrderWin()
         {
             InitializeComponent();
         }
@@ -21,16 +21,29 @@ namespace DefensiveCodingSampel
         private void PlaceOrder()
         {
             var customer = new Customer();
-            //Populate the customer instance
+            // Populate the customer instance
 
             var order = new Order();
-            //Populate the order instance
-            var payment = new Payment();
-            //Populate the payment instance
+            // Populate the order instance
 
-           
+            var payment = new Payment();
+            // Populate the payment info from the UI
+
             var orderController = new OrderController();
-            orderController.PlaceOrder(customer, order, payment, allowSplitOrders: false, emailReceipt:true);
+
+            try
+            {
+                var op = orderController.PlaceOrder(customer, order, payment,
+                    allowSplitOrders: false,
+                    emailReceipt: true);
+            }
+            catch (ArgumentNullException ex)
+            {
+                // log the issue
+                // display a message to the user
+                // that the order was not successful
+            }
         }
+
     }
 }

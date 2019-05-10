@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PedometerWin";
             this.Text = "PedometerWin";
+            this.Load += new System.EventHandler(this.PedometerWin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

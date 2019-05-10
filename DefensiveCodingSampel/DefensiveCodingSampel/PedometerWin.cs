@@ -36,5 +36,7 @@ namespace DefensiveCodingSampel
                 ResultLabel.Text = string.Empty;
             }
         }
+
+       
     }
 }

@@ -50,9 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomerTests.cs" />
+    <Compile Include="OrderControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core.Common\Core.Common.csproj">
+      <Project>{C0071BDA-E81C-4DD0-AF82-82D603D43C27}</Project>
+      <Name>Core.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DCS.BL\DCS.BL.csproj">
       <Project>{65377e38-ed11-40b4-b77c-1e27af12c554}</Project>
       <Name>DCS.BL</Name>
